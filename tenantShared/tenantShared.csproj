@@ -5,6 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="References\**" />
+    <Compile Remove="Services\**" />
+    <EmbeddedResource Remove="References\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="References\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="EPPlus" Version="4.5.3.3" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
@@ -20,17 +29,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\tenantCore\tenantCore.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="n3kAdrtP">
-      <HintPath>References\n3kAdrtP.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="References\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
